@@ -15,19 +15,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register')
-    ]);
-});
+Route::get('/', [\App\Http\Controllers\GeneralController::class, 'index'] )->name('index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/saluto', function () {
-    return Inertia::render('Saluto');
-})->middleware(['auth', 'verified'])->name('saluto');
+Route::get('/post_form', function () {
+    return Inertia::render('PostForm');
+})->middleware(['auth', 'verified'])->name('post_form');
 
 require __DIR__.'/auth.php';

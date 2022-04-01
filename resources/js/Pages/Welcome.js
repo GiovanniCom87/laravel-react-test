@@ -23,6 +23,9 @@ export default function Welcome(props) {
                         </>
                     )}
                 </div>
+                <div>
+                    <h2 className="text-white">{props.posts[0].body}</h2>
+                </div>
             </div>
         </>
     );
