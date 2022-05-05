@@ -1,11 +1,15 @@
-require('./bootstrap');
+require("./bootstrap");
+// import { MDCRipple } from "@material/ripple";
 
-import React from 'react';
-import { render } from 'react-dom';
-import { createInertiaApp } from '@inertiajs/inertia-react';
-import { InertiaProgress } from '@inertiajs/progress';
+// const buttonRipple = new MDCRipple(document.querySelector(".mdc-button"));
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
+import React from "react";
+import { render } from "react-dom";
+import { createInertiaApp } from "@inertiajs/inertia-react";
+import { InertiaProgress } from "@inertiajs/progress";
+
+const appName =
+    window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -15,4 +19,4 @@ createInertiaApp({
     },
 });
 
-InertiaProgress.init({ color: '#4B5563' });
+InertiaProgress.init({ color: "#4B5563" });

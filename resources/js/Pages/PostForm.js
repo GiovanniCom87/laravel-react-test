@@ -13,10 +13,17 @@ export default function PostForm(props) {
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <form className="w-full p-10" action="">
-                            <label className="w-full" htmlFor="">Titolo</label>
-                            <input type="text" name="title" placeholder="Titolo" />
+                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg p-8">
+                        <form className="min-w-4xl max-w-4xl mx-auto p-10">
+                            <div className="my-5">
+                                <label className="w-full" htmlFor="">Titolo</label>
+                                <input className="w-full rounded-md" type="text" name="title" placeholder="Titolo" />
+                            </div>
+                            <div>
+                                <label className="w-full" htmlFor="">Testo</label>
+                                <textarea className="w-full rounded-md" name="body" placeholder="Corpo" />
+                            </div>
+                            <button className="bg-red-400 rounded-md w-48 px-4 py-3 text-white hover:bg-red-300" type="submit"> Crea post </button>
                         </form>
                     </div>
                 </div>
